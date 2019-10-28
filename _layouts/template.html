@@ -36,9 +36,9 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="navBar" id="mainNavBar">
 		<a href="/">No</a>
-		<a href="#service">Not really</a>
-		<a href="#about">No thank you</a>
-		<a href="#contact">Leave please</a>
+		{% for page in site.pages %}
+    		<a href={{ page.filename }}>{{ page.title }}</a>
+		{% endfor %}
 		<a href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
 		<!--&#9776; is the code for the 3 line menu button-->
 	</div>
